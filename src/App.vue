@@ -1,32 +1,88 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <div id="menu">
+      <div id="brand">
+        <router-link to="/" class="menu-link">
+          <h1>VueMCU</h1>
+        </router-link>
+      </div>
+      <div id="side">
+        <router-link to="/about" class="menu-link">
+          <div class="menu-item">
+            <h2>About</h2>
+          </div>
+        </router-link>
+        <router-link to="/actors" class="menu-link">
+          <div class="menu-item">
+            <h2>Actors</h2>
+          </div>
+        </router-link>
+      </div>
+    </div>
     <router-view/>
+    <div id="footer">
+      <p>github: <a href="https://github.com/taylor-west/vue-lab">vue-lab</a></p>
+    </div>
   </div>
 </template>
 
+<script></script>
+
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  height: 100%;
 }
-
-nav {
-  padding: 30px;
+#menu {
+  //border: 1px dashed white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 2em;
+  background-color: #212121;
+  height: 4em;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#brand{
+  //border: 1px dashed white;
+  width: 6em;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+#side {
+  //border: 1px solid #ff0000;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-link{
+//border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  padding: 1em;
+  align-content: center;
+}
+#footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2em;
+  background-color: #212121;
+  color: white;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+#footer a{
+  color: white;
+}
+@media screen and (max-width: 40em) {
+   #menu {
+     font-size: 1em;
+     border: 3px solid #3030303;
+   }
+   #footer{
+     font-size: 1em;
+   }
+   .menu-link{
+     width: 5em;
+   }
 }
 </style>

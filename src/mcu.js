@@ -83,7 +83,7 @@ let mock = [
     id: 5,
     name: "Captain America: The First Avenger",
     release: "July 22, 2011",
-    director: ["Joe Jhonston"],
+    director: ["Joe Johnston"],
     producer: ["Kevin Feige"],
     duration: "2h 4min",
     genre: ["Action", "Adventure, Sci-Fi"],

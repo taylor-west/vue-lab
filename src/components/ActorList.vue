@@ -9,8 +9,12 @@
           <h1>{{ movie.name }}</h1>
         </div>
         <div class="info">
-          <p><em>Phase {{ movie.phase }}</em></p>
-          <p>IMDB: {{ movie.imdb }}</p>
+          <h2>Cast</h2>
+          <ul class="cast-list">
+            <li v-for="item in movie.cast" :key=item.length>
+              {{ item }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -19,7 +23,7 @@
 
 <script>
 export default {
-  name: "MovieList",
+  name: "ActorList",
   props: {
     movies: Array,
   }
@@ -88,7 +92,12 @@ export default {
 .phase {
   display: flex;
 }
-
+.cast-list{
+  font-size: 0.3em;
+  list-style: initial;
+  width: 100%;
+  padding-left: 0em;
+}
 button {
   height: 50px;
   background: #000;

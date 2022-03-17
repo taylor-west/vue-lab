@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="marvel-splash">
-      <img id="marvel_img" alt="Marvel Studios logo" src="../../images/marvel_logo_2.svg" >
+      <img id="marvel_img" alt="Marvel Studios logo" src="../../public/images/marvel_logo_2.svg" >
     </div>
     <div>
       <div class="wrapper">
@@ -12,16 +12,16 @@
         </div>
       </div>
     </div>
-    <MovieList :movies="movies" />
+    <ActorList :movies="movies" />
   </div>
 </template>
 
 <script>
-import MovieList from "../components/MovieList.vue";
+import ActorList from "../components/ActorList.vue";
 export default {
-  name: "Home",
+  name: "Actor",
   components: {
-    MovieList,
+    ActorList,
   },
   data() {
     return {
@@ -30,15 +30,7 @@ export default {
   },
   computed: {
     movies() {
-      try {
-        return this.$root.$data.movies.filter(
-          (movie) =>
-            movie.name.toLowerCase().search(this.searchText.toLowerCase()) >=
-            0
-        );
-      } catch {
-        return [];
-      }
+      return this.$root.$data.movies.filter(elem1 => elem1.cast.filter(elem2 => elem2.toLowerCase().search(this.searchText.toLowerCase()) >= 0).length > 0);
     },
   },
 };
@@ -70,6 +62,7 @@ export default {
     padding: 2em 1em;
     display: flex;
     justify-content: center;
+    color: black;
   }
   input{
     width: 75%;

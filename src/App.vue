@@ -19,9 +19,11 @@
         </router-link>
       </div>
     </div>
-    <router-view/>
+    <router-view />
     <div id="footer">
-      <p>github: <a href="https://github.com/taylor-west/vue-lab">vue-lab</a></p>
+      <p>
+        github: <a href="https://github.com/taylor-west/vue-lab">vue-lab</a>
+      </p>
     </div>
   </div>
 </template>
@@ -41,7 +43,7 @@
   background-color: #212121;
   height: 4em;
 }
-#brand{
+#brand {
   //border: 1px dashed white;
   width: 6em;
 }
@@ -50,15 +52,15 @@
   display: flex;
   justify-content: space-between;
 }
-.menu-link{
-//border: 1px solid white;
+.menu-link {
+  //border: 1px solid white;
   color: white;
   text-decoration: none;
   font-family: monospace;
   padding: 1em;
   align-content: center;
 }
-#footer{
+#footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -70,19 +72,19 @@
   display: flex;
   align-items: center;
 }
-#footer a{
+#footer a {
   color: white;
 }
 @media screen and (max-width: 40em) {
-   #menu {
-     font-size: 1em;
-     border: 3px solid #3030303;
-   }
-   #footer{
-     font-size: 1em;
-   }
-   .menu-link{
-     width: 5em;
-   }
+  #menu {
+    font-size: 1em;
+    border: 3px solid #3030303;
+  }
+  #footer {
+    font-size: 1em;
+  }
+  .menu-link {
+    width: 5em;
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="marvel-splash">
-      <img id="marvel_img" alt="Marvel Studios logo" src="../../public/images/marvel_logo_2.svg" >
+      <img id="marvel_img" alt="Marvel Studios logo" src="../../public/marvel_logo_2.svg" >
     </div>
     <div>
       <div class="wrapper">

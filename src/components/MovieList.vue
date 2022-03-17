@@ -3,7 +3,7 @@
     <div class="movies">
       <div v-for="movie in movies" :key="movie.id" class="movie">
         <div class="image">
-        <!--  <img :src="'/images/' + movie.image"> -->
+         <!-- <img :src="'../../public/images/' + movie.image"> -->
         </div>
         <div class="name">
           <h1>{{ movie.name }}</h1>

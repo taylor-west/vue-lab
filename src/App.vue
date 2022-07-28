@@ -35,7 +35,6 @@
   height: 100%;
 }
 #menu {
-  //border: 1px dashed white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,16 +43,13 @@
   height: 4em;
 }
 #brand {
-  //border: 1px dashed white;
   width: 6em;
 }
 #side {
-  //border: 1px solid #ff0000;
   display: flex;
   justify-content: space-between;
 }
 .menu-link {
-  //border: 1px solid white;
   color: white;
   text-decoration: none;
   font-family: monospace;
